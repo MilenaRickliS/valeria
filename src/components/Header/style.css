@@ -3,7 +3,7 @@ nav{
     position: fixed;
     z-index: 99;
     width: 100%;    
-    background: #262626;
+    background: #A19581;
   }
   nav .wrapper{
     position: relative;
@@ -17,7 +17,7 @@ nav{
     justify-content: space-between;
   }
   .wrapper .logo a{
-    color: #EEE1B3;
+    color: #262626;
     font-size: 30px;
     font-weight: 600;
     text-decoration: none;
@@ -29,7 +29,7 @@ nav{
     list-style: none;
   }
   .nav-links li a{
-    color: #EEE1B3;
+    color: #262626;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
@@ -38,14 +38,14 @@ nav{
     transition: all 0.3s ease;
   }
   .nav-links li a:hover{
-    background: #828236;
+    background: #8b8170;
   }
   .nav-links .mobile-item{
     display: none;
   }
   .nav-links .drop-menu{
     position: absolute;
-    background: #262626;
+    background: #A19581;
     width: 180px;
     line-height: 45px;
     top: 85px;
@@ -68,7 +68,7 @@ nav{
     border-radius: 0px;
   }
   .wrapper .btn{
-    color: #EEE1B3;
+    color: #262626;
     font-size: 20px;
     cursor: pointer;
     display: none;
@@ -90,7 +90,7 @@ nav{
       max-width: 350px;
       top: 0;
       left: -100%;
-      background: #262626;
+      background: #A19581;
       display: block;
       padding: 50px 10px;
       line-height: 50px;
@@ -103,10 +103,10 @@ nav{
       width: 10px;
     }
     ::-webkit-scrollbar-track {
-      background: #737373;
+      background: #A19581;
     }
     ::-webkit-scrollbar-thumb {
-      background: #ffea00;
+      background: rgb(82, 82, 77);
     }
     #menu-btn:checked ~ .nav-links{
       left: 0%;
@@ -146,7 +146,7 @@ nav{
     }
     .nav-links .mobile-item{
       display: block;
-      color: #EEE1B3;
+      color: #000;
       font-size: 20px;
       font-weight: 500;
       padding-left: 20px;
@@ -155,7 +155,7 @@ nav{
       transition: all 0.3s ease;
     }
     .nav-links .mobile-item:hover{
-      background: #262626;
+      background: #A19581;
     }
   }
   nav input{
