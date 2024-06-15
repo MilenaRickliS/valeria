@@ -65,7 +65,14 @@ function Inicio() {
           <div className="item-2"></div>
           </section>
       </div>
-      {/* <div><Footer/></div> */}
+
+      <div className="sobre-trabalho">
+
+      </div>
+      <div className="avaliacao">
+
+      </div>
+      <Footer/>
       </div>
 
   );
