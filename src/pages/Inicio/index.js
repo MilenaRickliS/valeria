@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 import foto1 from '../../assets/foto1.png';
 import foto2 from '../../assets/foto2.png';
 import foto3 from '../../assets/foto3.png';
+import valeria from '../../assets/FB_IMG_1718049833611.jpg';
 
 function Inicio() {
    return (
@@ -67,14 +68,44 @@ function Inicio() {
       </div>
 
       <div className="sobre-trabalho">
-
+        <div>
+          <img src={valeria} width="100%" maxwidth="600px" height="100%"/>
+        </div>
+        <div className="sobre-text">
+          <h3>Sobre o meu trabalho</h3>
+          <br/>
+          <p>nesses cursos você encontrará  jdskjsk</p>
+          <br/>
+          <div className="sobre-list">
+            <i class="bi bi-check-circle"></i>
+            <p>um ponto positivo</p>
+          </div>
+          <br/>
+          <div className="sobre-list">
+            <i class="bi bi-check-circle"></i>
+            <p>um ponto positivo</p>
+          </div>
+          <br/>
+          <div className="sobre-list">
+            <i class="bi bi-check-circle"></i>
+            <p>um ponto positivo</p>
+          </div>
+          <br/>
+          <div className="sobre-list">
+            <i class="bi bi-check-circle"></i>
+            <p>um ponto positivo</p>
+          </div>
+          <br/>
+          <br/>
+          <a className="link-sobre">Saiba mais!</a>
+        </div>
       </div>
       <div className="avaliacao">
         <h1>Avaliações</h1>
         <div className="container-avaliacao">
-          <strong>nome  pessoa</strong>
-          <p>12/06/2004</p>
-          <p>lorem</p>
+          <strong >nome  pessoa</strong>
+          <p className="data">12/06/2004</p>
+          <p className="comentario">As frases para vender produtos podem oferecer vantagens incríveis para sua equipe de vendas. Além de facilitar o trabalho, elas também podem ajudar no aumento do desempenho das estratégias que você já aplica. </p>
           <p className="flecha"><i className="bi bi-arrow-right"></i></p>
         </div>
       </div>

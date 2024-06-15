@@ -104,13 +104,43 @@
   background-color: #E6DFD2;
   width: 100%;
   height: 700px;
+  display: flex;
 }
+.sobre-text{
+  padding: 90px;
+}
+h3{
+  font-weight: 700;
+  font-size: 30px;
+}
+.sobre-list{
+  display: flex;
+}
+.sobre-list p{
+  margin-left: 10px;
+  font-size: 20px;
+}
+.sobre-list i{
+  font-size: 20px;
+}
+.link-sobre{
+  background-color: #B2905D;
+  color: #fff;
+  padding: 10px 65px;
+}
+.link-sobre:hover{
+  text-decoration: none;
+  color: #fff;
+  background-color: #907245;
+  cursor: pointer;
+}
+
 
 /* avaliacoes */
 .avaliacao{
   background-color: #F5F5F5;
   width: 100%;
-  height: 450px;
+  height: 550px;
 }
 .container-avaliacao{
   margin: 0px auto;
@@ -121,17 +151,32 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 0px 0px 50px 0px;
 }
-.flecha{
-  
+
+.data{
+  color: #A19581;
+  font-weight: 600;
 }
+.comentario{
+  text-align: justify;
+}
+.flecha{
+  font-size: 20px;
+  margin-left: 500px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 626px){
     
   .container-avaliacao{        
       max-width: 400px;
              
   }
+  .flecha{
     
+    margin-left: 300px;
    
+   }
+  
 }
 @media only screen and (max-width: 419px){
   
@@ -139,7 +184,10 @@
       max-width: 290px;
              
   }
-  
+  .flecha{
+    margin-left: 180px;
+   
+   }
   
   
    
