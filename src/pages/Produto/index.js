@@ -9,7 +9,7 @@ function Produto() {
       <div>
         <div><Header/></div>
       
-      {/* <div><Footer/></div> */}
+      <Footer/>
       </div>
 
   );

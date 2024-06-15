@@ -9,7 +9,7 @@ function Sobre() {
       <div>
         <div><Header/></div>
       
-      {/* <div><Footer/></div> */}
+      <Footer/>
       </div>
 
   );

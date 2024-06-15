@@ -70,7 +70,13 @@ function Inicio() {
 
       </div>
       <div className="avaliacao">
-
+        <h1>Avaliações</h1>
+        <div className="container-avaliacao">
+          <strong>nome  pessoa</strong>
+          <p>12/06/2004</p>
+          <p>lorem</p>
+          <p className="flecha"><i className="bi bi-arrow-right"></i></p>
+        </div>
       </div>
       <Footer/>
       </div>

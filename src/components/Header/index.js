@@ -10,16 +10,16 @@ function Header() {
   return (
     <header>
         <nav>
-            <div class="wrapper">
-              <div class="logo"><a href="/"><img src={logo} width="100px" height="70px"/></a></div>
+            <div className="wrapper">
+              <div className="logo"><a href="/"><img src={logo} width="100px" height="70px"/></a></div>
               <input type="radio" name="slider" id="menu-btn"/>
               <input type="radio" name="slider" id="close-btn"/>
-              <ul class="nav-links">
-                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+              <ul className="nav-links">
+                <label for="close-btn" className="btn close-btn"><i className="fas fa-times"></i></label>
                 <li><a href="/">cursos</a></li>               
                 <li><a href="/sobre">sobre</a></li>
               </ul>
-              <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+              <label for="menu-btn" className="btn menu-btn"><i className="fas fa-bars"></i></label>
               
             </div>
         

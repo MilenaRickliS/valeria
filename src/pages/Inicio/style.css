@@ -110,5 +110,37 @@
 .avaliacao{
   background-color: #F5F5F5;
   width: 100%;
-  height: 600px;
+  height: 450px;
+}
+.container-avaliacao{
+  margin: 0px auto;
+  background-color: #EEEEEE;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 0px 0px 50px 0px;
+}
+.flecha{
+  
+}
+@media only screen and (max-width: 626px){
+    
+  .container-avaliacao{        
+      max-width: 400px;
+             
+  }
+    
+   
+}
+@media only screen and (max-width: 419px){
+  
+  .container-avaliacao{        
+      max-width: 290px;
+             
+  }
+  
+  
+  
+   
 }
