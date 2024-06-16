@@ -73,31 +73,31 @@ function Inicio() {
         </div>
         <div className="sobre-text">
           <h3>Sobre o meu trabalho</h3>
-          <br/>
-          <p>nesses cursos você encontrará  jdskjsk</p>
-          <br/>
+          
+          <p>nesses cursos você encontrará:</p>
+          
           <div className="sobre-list">
             <i class="bi bi-check-circle"></i>
             <p>um ponto positivo</p>
           </div>
-          <br/>
+          
           <div className="sobre-list">
             <i class="bi bi-check-circle"></i>
             <p>um ponto positivo</p>
           </div>
-          <br/>
+          
           <div className="sobre-list">
             <i class="bi bi-check-circle"></i>
             <p>um ponto positivo</p>
           </div>
-          <br/>
+         
           <div className="sobre-list">
             <i class="bi bi-check-circle"></i>
             <p>um ponto positivo</p>
           </div>
+          
           <br/>
-          <br/>
-          <a className="link-sobre">Saiba mais!</a>
+          <a href="/sobre" className="link-sobre">Saiba mais!</a>
         </div>
       </div>
       <div className="avaliacao">

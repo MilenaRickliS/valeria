@@ -135,7 +135,96 @@ h3{
   background-color: #907245;
   cursor: pointer;
 }
-
+@media only screen and (max-width: 850px){
+  .sobre-text{
+    padding: 50px;
+  }
+  .sobre-trabalho{
+    height: 500px;
+  }
+  .sobre-list p{
+    
+    font-size: 15px;
+  }
+  .sobre-list i{
+    font-size: 15px;
+  }
+  .link-sobre{
+    padding: 10px 40px;
+  }
+}
+@media only screen and (max-width: 750px){
+  h3{
+    
+    font-size: 20px;
+  }
+  .sobre-text{
+    padding: 50px;
+  }
+  .sobre-trabalho{
+    height: 470px;
+  }
+  .sobre-list p{
+    
+    font-size: 12px;
+  }
+  .sobre-list i{
+    font-size: 12px;
+  }
+  .link-sobre{
+    padding: 5px 20px;
+  }
+}
+@media only screen and (max-width: 560px){
+  h3{
+    
+    font-size: 15px;
+  }
+  .sobre-text{
+    padding: 20px;
+  }
+  .sobre-trabalho{
+    height: 400px;
+  }
+  .sobre-list p{
+    
+    font-size: 10px;
+  }
+  .sobre-list i{
+    font-size: 10px;
+  }
+  .link-sobre{
+    padding: 5px 20px;
+  }
+}
+@media only screen and (max-width: 420px){
+  h3{
+    
+    font-size: 15px;
+  }
+  .sobre-text{
+    padding: 20px;
+  }
+  .sobre-trabalho{
+    height: 300px;
+  }
+  .sobre-list p{
+    
+    font-size: 10px;
+  }
+  .sobre-list i{
+    font-size: 10px;
+  }
+  .link-sobre{
+    padding: 5px 20px;
+  }
+}
+@media only screen and (max-width: 350px){
+ 
+  .link-sobre{
+    padding: 5px 10px;
+  }
+}
 
 /* avaliacoes */
 .avaliacao{
