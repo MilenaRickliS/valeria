@@ -67,39 +67,7 @@ function Inicio() {
           </section>
       </div>
 
-      <div className="sobre-trabalho">
-        <div>
-          <img src={valeria} width="100%" maxwidth="600px" height="100%"/>
-        </div>
-        <div className="sobre-text">
-          <h3>Sobre o meu trabalho</h3>
-          
-          <p>nesses cursos você encontrará:</p>
-          
-          <div className="sobre-list">
-            <i class="bi bi-check-circle"></i>
-            <p>um ponto positivo</p>
-          </div>
-          
-          <div className="sobre-list">
-            <i class="bi bi-check-circle"></i>
-            <p>um ponto positivo</p>
-          </div>
-          
-          <div className="sobre-list">
-            <i class="bi bi-check-circle"></i>
-            <p>um ponto positivo</p>
-          </div>
-         
-          <div className="sobre-list">
-            <i class="bi bi-check-circle"></i>
-            <p>um ponto positivo</p>
-          </div>
-          
-          <br/>
-          <a href="/sobre" className="link-sobre">Saiba mais!</a>
-        </div>
-      </div>
+      
       <div className="avaliacao">
         <h1>Avaliações</h1>
         <div className="container-avaliacao">

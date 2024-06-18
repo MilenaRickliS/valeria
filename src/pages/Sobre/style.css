@@ -1,0 +1,33 @@
+
+
+
+.meuscursos{
+    background-color: #6B6969;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.meuscursos a{
+    color: #fff;
+    font-size: 25px;
+}
+h3{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .meuscursos{
+    max-width: 300px;
+    padding: 20px;
+  }
+  
+}
