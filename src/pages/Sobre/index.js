@@ -14,6 +14,19 @@ function Sobre() {
         <br/>
         <br/>
         
+        <div>
+          <h1>Sobre mim</h1>
+        <img src={valeria} />
+        <div>
+          <h3>Sobre o meu trabalho</h3>
+          <p>nesses cursos você encontrará:</p>
+          <div>
+            <i class="bi bi-check-circle-fill"></i>
+            <p>um ponto positivo</p>
+          </div>
+          
+        </div>
+        </div>
         
         <div>
           <h3>Interessado? Verifique meus cursos</h3>

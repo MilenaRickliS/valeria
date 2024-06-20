@@ -1,4 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { db } from '../../Firebase/firebaseConnection';
+import {
+  collection,
+  onSnapshot
+} from 'firebase/firestore';
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 import "./style.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -7,8 +14,30 @@ import foto2 from '../../assets/foto2.png';
 import foto3 from '../../assets/foto3.png';
 import valeria from '../../assets/FB_IMG_1718049833611.jpg';
 
+
 function Inicio() {
-   return (
+  
+  const [produtos, setProdutos] = useState([]);
+  // Efeito que carrega os posts do Firestore sempre que o componente é montado.
+  useEffect(() => {
+    async function loadPosts(){
+    const unsub = onSnapshot(collection(db, "produtos"), (snapshot) => {
+    let listaPost = [];
+    snapshot.forEach((doc) => {
+      listaPost.push({
+        id: doc.id,
+        name: doc.data().name,
+        price: doc.data().price,
+        descr: doc.data().descr,
+        image: doc.data().image
+    })
+    })
+    setProdutos(listaPost);
+    })
+    }
+    loadPosts();
+  }, [])
+  return (
     
       <div>
         <div><Header/></div>
@@ -51,23 +80,41 @@ function Inicio() {
         </div>
       </div>
       
+     
+      <div>
+      <h1>Produtos</h1>
+      <ul className="prod">
+        {produtos.map( (post) => {
+          return(
+          <li key={post.id} className="produtos">
+            <img src={post.image}/>
+            <div className="titulo">
+              <strong>{post.name}</strong> 
+              <strong>R${post.price},00 </strong> 
+            </div>            
+            <p className="descricao">{post.descr}</p> <br/>
+            <Link className="link-produtos" to={`/produto/${post.id}`}>Saiba Mais!</Link>
+          </li>
 
-      <div className="produtos">
-        <input type="radio" name="position" checked />
-        <input type="radio" name="position" />
-        <input type="radio" name="position" />
-        <input type="radio" name="position" />
-        <input type="radio" name="position" />
-        <section id="carousel-2">
-          <div className="item-2"></div>
-          <div className="item-2"></div>
-          <div className="item-2"></div>
-          <div className="item-2"></div>
-          <div className="item-2"></div>
-          </section>
-      </div>
-
+          )
+        })}
+      </ul>
+     </div>
       
+
+      <div className="sobre-trabalho">
+        <img src={valeria} />
+        <div>
+          <h2>Sobre o meu trabalho</h2>
+          <p>nesses cursos você encontrará:</p>
+          <div className="list">
+            <i className="bi bi-check-circle-fill"></i>
+            <p>um ponto positivo</p>
+          </div><br/>
+          <a href="/sobre" className="saiba-mais">Saiba mais!</a>
+
+        </div>
+      </div>
       <div className="avaliacao">
         <h1>Avaliações</h1>
         <div className="container-avaliacao">

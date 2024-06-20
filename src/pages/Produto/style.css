@@ -1,0 +1,17 @@
+.pag-produto{
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+.img-produto{
+    border-radius: 15px;
+    width: 400px;
+    height: 400px;
+}
+.titulo-produto{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 25px;
+  }
