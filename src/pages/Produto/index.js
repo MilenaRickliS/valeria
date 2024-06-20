@@ -27,7 +27,9 @@ function Produto() {
         name: doc.data().name,
         price: doc.data().price,
         descr: doc.data().descr,
-        image: doc.data().image   
+        image: doc.data().image,
+        descrMaior: doc.data().descrMaior,
+        ponto1: doc.data().ponto1   
     })
     })
     setProdutos(lista);
@@ -57,9 +59,36 @@ function Produto() {
               <strong>{produto.name}</strong> 
               <strong>R${produto.price},00 </strong> 
             </div>            
-            <p className="descricao">{produto.descr}</p> <br/>
-            <Link to={''}>Comprar</Link>
+            <p className="descricao-produto">{produto.descr}</p> <br/>
+            <Link className="botao-comprar" to={''}>Comprar</Link> <br/> <br/> <br/>
         </div>
+      <div className="descrMaior">
+        <h1>Descrição</h1>
+        <p>{produto.descrMaior}</p><br/>
+      </div>
+      <div className="sobre-curso">
+        <strong>Este curso inclui:</strong>
+        <p>nesses cursos você encontrará:</p>
+        <div className="list-curso">
+            <i className="bi bi-check-circle-fill"></i>
+            <p>{produto.ponto1}</p>
+          </div>
+      </div>
+      <hr></hr>
+
+        <div className="avaliacao">
+        <h1>Avaliações</h1>
+        <div className="container-avaliacao">
+          <strong >nome  pessoa</strong>
+          <p className="data">12/06/2004</p>
+          <p className="comentario">As frases para vender produtos podem oferecer vantagens incríveis para sua equipe de vendas. Além de facilitar o trabalho, elas também podem ajudar no aumento do desempenho das estratégias que você já aplica. </p>
+          <p className="flecha"><i className="bi bi-arrow-right"></i></p>
+        </div>
+        <div className="avaliacao-link">
+          <Link className="link" to=''>Escreva uma avaliação</Link>
+          <Link className="link" to=''><i className="bi bi-arrow-right"></i></Link>
+        </div>
+      </div>
       <Footer/>
       </div>
 

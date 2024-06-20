@@ -82,7 +82,7 @@ function Inicio() {
       
      
       <div>
-      <h1>Produtos</h1>
+      <h1>Meus cursos</h1>
       <ul className="prod">
         {produtos.map( (post) => {
           return(
@@ -122,6 +122,10 @@ function Inicio() {
           <p className="data">12/06/2004</p>
           <p className="comentario">As frases para vender produtos podem oferecer vantagens incríveis para sua equipe de vendas. Além de facilitar o trabalho, elas também podem ajudar no aumento do desempenho das estratégias que você já aplica. </p>
           <p className="flecha"><i className="bi bi-arrow-right"></i></p>
+        </div>
+        <div className="avaliacao-link">
+          <Link className="link" to=''>Escreva uma avaliação</Link>
+          <Link className="link" to=''><i className="bi bi-arrow-right"></i></Link>
         </div>
       </div>
       <Footer/>

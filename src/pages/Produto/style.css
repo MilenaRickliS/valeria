@@ -15,3 +15,73 @@
     padding: 15px;
     font-size: 25px;
   }
+  .descricao-produto{
+    font-size: 15px; 
+    text-align: justify;
+    margin: 12px;
+  }
+.botao-comprar{
+    background-color: #8F7739;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 150px;
+}
+.botao-comprar:hover{
+    background-color: #c08900;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 420px){
+    .img-produto{
+        
+        width: 300px;
+        height: 300px;
+    }
+    .botao-comprar{
+        
+        padding: 10px 120px;
+    }
+}
+@media only screen and (max-width: 320px){
+    .img-produto{
+        
+        width: 250px;
+        height: 250px;
+    }
+    .botao-comprar{
+        
+        padding: 10px 100px;
+    }
+}
+/* descrição */
+.descrMaior{
+    background-color: #E6DFD2;
+    padding: 30px;
+}
+.descrMaior p{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    text-align: justify;
+}
+/* sobre */
+.sobre-curso{
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+.list-curso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.list-curso i {
+    margin-right: 5px;
+  }
+hr{
+    width: 100%;
+    max-width: 800px;
+    border:  1px solid #d2d2d2;
+}

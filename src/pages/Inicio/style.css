@@ -125,6 +125,25 @@
   margin-left: 500px;
   cursor: pointer;
 }
+.avaliacao-link{
+  border-radius: 30px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+}
+.link{
+  color: #000;
+
+}
+.link:hover{
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+}
 
 @media only screen and (max-width: 626px){
     
