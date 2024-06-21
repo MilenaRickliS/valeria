@@ -2,7 +2,8 @@ import { Routes, Route } from 'react-router-dom'
 
 import Inicio from '../pages/Inicio';
 import Sobre from '../pages/Sobre';
-import Produto from '../pages/Produto'
+import Produto from '../pages/Produto';
+import Avaliacao from '../pages/Avaliacao';
 
 
 function RoutesApp(){
@@ -13,6 +14,8 @@ function RoutesApp(){
       <Route path="/sobre" element={ <Sobre/> } />
 
       <Route path="/produto/:id" element={ <Produto/> } />
+
+      <Route path="/avaliacao" element={ <Avaliacao/> } />
     
     </Routes>
   )

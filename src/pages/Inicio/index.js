@@ -124,8 +124,8 @@ function Inicio() {
           <p className="flecha"><i className="bi bi-arrow-right"></i></p>
         </div>
         <div className="avaliacao-link">
-          <Link className="link" to=''>Escreva uma avaliação</Link>
-          <Link className="link" to=''><i className="bi bi-arrow-right"></i></Link>
+          <Link className="link" to='/avaliacao'>Escreva uma avaliação</Link>
+          <Link className="link" to='/avaliacao'><i className="bi bi-arrow-right"></i></Link>
         </div>
       </div>
       <Footer/>

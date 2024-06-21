@@ -1,6 +1,41 @@
+/* inicio */
+.inicio-sobre{
+  background-image: url('../../assets/fundo1.jpg');
+  background-size: cover;
+  margin: 0 auto;
+  text-align: center;
+}
 
+/* sobre */
+.sobre-mim{
+  display: flex;
+  background-color: #fff;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+ }
+ .sobre-mim img{
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+ }
 
+/* livro */
+.livro{
+  display: flex;
+  background-color: #E6DFD2;
+}
+.livro img{
+  width: 200px;
+  margin: 10px;
+}
+.descr-livro{
+  margin: 30px;
+  text-align: justify;
+}
 
+/* meus cursos */
 .meuscursos{
     background-color: #6B6969;
     color: #fff;
@@ -31,3 +66,4 @@ h3{
   }
   
 }
+
