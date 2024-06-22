@@ -99,7 +99,7 @@ function Avaliacao() {
             <button className="button-formulario" onClick={handleAdd}>Adicionar</button> 
             </div>
 
-          </div>
+          </div> <br/><br/> <br/>
 
          {/* <ul className="prod">
             {avaliacao.map( (post) => {
@@ -120,17 +120,18 @@ function Avaliacao() {
        
 
       </div>
-<div className="avaliacao">
-      <Carousel infiniteLoop={true} showStatus={false} showIndicators={false} emulateTouch={true} className="container-avaliacao">
+    {/* <div className="avaliacao">
+      <Carousel infiniteLoop={true} showStatus={false} showIndicators={false} emulateTouch={true} showArrows={false} interval={3000} swipeable={true} className="container-avaliacao">
           {avaliacao.map((post) => (
             <div key={post.id} className="div-avaliacao">
               <strong className="nome-pessoa">{post.name}</strong>
               <p className="data">{post.data}</p>
               <p className="comentario">{post.comentario}</p>
+              <p className="flecha"><i className="bi bi-arrow-right"></i></p>
             </div>
           ))}
         </Carousel>
-        </div>    
+        </div>     */}
       <Footer/>
       </div>
 
