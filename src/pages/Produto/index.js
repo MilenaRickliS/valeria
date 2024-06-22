@@ -10,11 +10,18 @@ import {
     onSnapshot
   } from 'firebase/firestore';
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
 function Produto() {
   const { id } = useParams();
   //context para armazenar produtos
   const [produtos, setProdutos] = useState([]);
   const [produto, setProduto] = React.useState(null);
+
+  const [avaliacao1, setAvaliacao1] = useState([]);
+  const [avaliacao2, setAvaliacao2] = useState([]);
+  const [avaliacao3, setAvaliacao3] = useState([]);
 
   // Efeito que carrega os produtos do Firestore sempre que o componente é montado.
   useEffect(() => {
@@ -39,8 +46,74 @@ function Produto() {
     loadProdutos();
   }, [id])
 
+  useEffect(() => {
+    async function loadAvaliacao1(){
+    const unsub = onSnapshot(collection(db, "avaliacaoProduto1"), (snapshot) => {
+    let lista = [];
+    snapshot.forEach((doc) => {
+      lista.push({
+        id: doc.id,
+        name: doc.data().name,
+        data: doc.data().data,
+        comentario: doc.data().comentario  
+    })
+    })
+    setAvaliacao1(lista);
+    
+    })
+    }
+    loadAvaliacao1();
+  }, [])
+
+  useEffect(() => {
+    async function loadAvaliacao2(){
+    const unsub = onSnapshot(collection(db, "avaliacaoProduto2"), (snapshot) => {
+    let lista = [];
+    snapshot.forEach((doc) => {
+      lista.push({
+        id: doc.id,
+        name: doc.data().name,
+        data: doc.data().data,
+        comentario: doc.data().comentario  
+    })
+    })
+    setAvaliacao2(lista);
+    
+    })
+    }
+    loadAvaliacao2();
+  }, [])
+
+  useEffect(() => {
+    async function loadAvaliacao3(){
+    const unsub = onSnapshot(collection(db, "avaliacaoProduto3"), (snapshot) => {
+    let lista = [];
+    snapshot.forEach((doc) => {
+      lista.push({
+        id: doc.id,
+        name: doc.data().name,
+        data: doc.data().data,
+        comentario: doc.data().comentario  
+    })
+    })
+    setAvaliacao3(lista);
+    
+    })
+    }
+    loadAvaliacao3();
+  }, [])
+
   if (!produto) {
     return <div>Carregando...</div>;
+  }
+
+  let avaliacoes;
+  if (produto.id === 'produtos') {
+    avaliacoes = avaliacao1;
+  } else if (produto.id === 'produtos1') {
+    avaliacoes = avaliacao2;
+  } else if (produto.id === 'produtos2') {
+    avaliacoes = avaliacao3;
   }
 
    return (
@@ -78,12 +151,16 @@ function Produto() {
 
         <div className="avaliacao">
         <h1>Avaliações</h1>
-        <div className="container-avaliacao">
-          <strong >nome  pessoa</strong>
-          <p className="data">12/06/2004</p>
-          <p className="comentario">As frases para vender produtos podem oferecer vantagens incríveis para sua equipe de vendas. Além de facilitar o trabalho, elas também podem ajudar no aumento do desempenho das estratégias que você já aplica. </p>
-          <p className="flecha"><i className="bi bi-arrow-right"></i></p>
-        </div>
+        <Carousel infiniteLoop={true} showStatus={false} showIndicators={false} emulateTouch={true} showArrows={false} interval={3000} swipeable={true} className="container-avaliacao">        
+          {avaliacoes.map((post) => (
+            <div key={post.id} className="div-avaliacao">
+              <strong className="nome-pessoa">{post.name}</strong>
+              <p className="data">{post.data}</p>
+              <p className="comentario">{post.comentario}</p>
+              <p className="flecha"><i className="bi bi-arrow-right"></i></p>
+            </div>
+          ))}
+        </Carousel>
         <div className="avaliacao-link">
           <Link className="link" to={`/avaliacaoProdutos/${produto.id}`}>Escreva uma avaliação</Link>
           <Link className="link" to={`/avaliacaoProdutos/${produto.id}`}><i className="bi bi-arrow-right"></i></Link>

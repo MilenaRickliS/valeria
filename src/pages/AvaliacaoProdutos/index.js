@@ -21,7 +21,7 @@ function AvaliacaoProdutos() {
     const ano = data1.getFullYear()
     const dataAtual = `${dia}/${mes}/${ano}`
 
-    const [avaliacao, setAvaliacao] = useState([]);
+    
     const [name, setName] = useState('');
     const [data, setData] = useState(dataAtual);
     const [comentario, setComentario] = useState('');
