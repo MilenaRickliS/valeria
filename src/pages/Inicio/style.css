@@ -105,6 +105,7 @@
 }
 .container-avaliacao{
   margin: 0px auto;
+  text-align: start;
   background-color: #EEEEEE;
   width: 100%;
   max-width: 600px;
@@ -112,13 +113,18 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 0px 0px 50px 0px;
 }
-
+.nome-pessoa{
+  text-align: start;
+  font-size: 20px;
+}
 .data{
   color: #A19581;
   font-weight: 600;
+  text-align: start;
 }
 .comentario{
   text-align: justify;
+
 }
 .flecha{
   font-size: 20px;
