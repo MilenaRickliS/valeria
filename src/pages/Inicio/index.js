@@ -13,10 +13,14 @@ import foto2 from '../../assets/foto2.png';
 import foto3 from '../../assets/foto3.png';
 import valeria from '../../assets/FB_IMG_1718049833611.jpg';
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 function Inicio() {
   
   const [produtos, setProdutos] = useState([]);
+  const [avaliacao, setAvaliacao] = useState([]);
+
   // Efeito que carrega os posts do Firestore sempre que o componente é montado.
   useEffect(() => {
     async function loadPosts(){
@@ -36,6 +40,26 @@ function Inicio() {
     }
     loadPosts();
   }, [])
+
+  useEffect(() => {
+    async function loadAvaliacao(){
+    const unsub = onSnapshot(collection(db, "avaliacoesGerais"), (snapshot) => {
+    let lista = [];
+    snapshot.forEach((doc) => {
+      lista.push({
+        id: doc.id,
+        name: doc.data().name,
+        data: doc.data().data,
+        comentario: doc.data().comentario  
+    })
+    })
+    setAvaliacao(lista);
+    
+    })
+    }
+    loadAvaliacao();
+  }, [])
+
   return (
     
       <div>
@@ -116,17 +140,28 @@ function Inicio() {
       </div>
       <div className="avaliacao">
         <h1>Avaliações</h1>
-        <div className="container-avaliacao">
+        {/* <div className="container-avaliacao">
           <strong >nome  pessoa</strong>
           <p className="data">12/06/2004</p>
           <p className="comentario">As frases para vender produtos podem oferecer vantagens incríveis para sua equipe de vendas. Além de facilitar o trabalho, elas também podem ajudar no aumento do desempenho das estratégias que você já aplica. </p>
           <p className="flecha"><i className="bi bi-arrow-right"></i></p>
-        </div>
+        </div> */}
+        <Carousel infiniteLoop={true} showStatus={false} showIndicators={false} emulateTouch={true} showArrows={false} interval={3000} swipeable={true} className="container-avaliacao">
+          {avaliacao.map((post) => (
+            <div key={post.id} className="div-avaliacao">
+              <strong className="nome-pessoa">{post.name}</strong>
+              <p className="data">{post.data}</p>
+              <p className="comentario">{post.comentario}</p>
+              <p className="flecha"><i className="bi bi-arrow-right"></i></p>
+            </div>
+          ))}
+        </Carousel>
         <div className="avaliacao-link">
           <Link className="link" to='/avaliacao'>Escreva uma avaliação</Link>
           <Link className="link" to='/avaliacao'><i className="bi bi-arrow-right"></i></Link>
         </div>
       </div>
+
       <Footer/>
       </div>
 

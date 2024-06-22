@@ -4,6 +4,7 @@ import Inicio from '../pages/Inicio';
 import Sobre from '../pages/Sobre';
 import Produto from '../pages/Produto';
 import Avaliacao from '../pages/Avaliacao';
+import AvaliacaoProdutos from '../pages/AvaliacaoProdutos';
 
 
 function RoutesApp(){
@@ -16,6 +17,8 @@ function RoutesApp(){
       <Route path="/produto/:id" element={ <Produto/> } />
 
       <Route path="/avaliacao" element={ <Avaliacao/> } />
+
+      <Route path="/avaliacaoProdutos/:id" element={ <AvaliacaoProdutos/> } />
     
     </Routes>
   )
