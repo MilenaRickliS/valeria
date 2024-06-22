@@ -4,7 +4,6 @@ import {
   collection,
   onSnapshot
 } from 'firebase/firestore';
-import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import "./style.css";
 import Header from "../../components/Header";
@@ -87,7 +86,7 @@ function Inicio() {
         {produtos.map( (post) => {
           return(
           <li key={post.id} className="produtos">
-            <img src={post.image}/>
+            <img src={post.image} alt="produtos"/>
             <div className="titulo">
               <strong>{post.name}</strong> 
               <strong>R${post.price},00 </strong> 
@@ -103,7 +102,7 @@ function Inicio() {
       
 
       <div className="sobre-trabalho">
-        <img src={valeria} />
+        <img src={valeria} alt="foto valéria"/>
         <div>
           <h2>Sobre o meu trabalho</h2>
           <p>nesses cursos você encontrará:</p>

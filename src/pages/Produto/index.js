@@ -54,7 +54,7 @@ function Produto() {
         <br/>
         <br/>
         <div className="pag-produto">
-        <img className="img-produto" src={produto.image}/>
+        <img className="img-produto" src={produto.image} alt="imagem produto"/>
             <div className="titulo-produto">
               <strong>{produto.name}</strong> 
               <strong>R${produto.price},00 </strong> 

@@ -6,18 +6,10 @@ import Footer from "../../components/Footer";
 import { useState, useEffect } from 'react';
 import { db } from '../../Firebase/firebaseConnection';
 import {
-  doc,
-  setDoc,
   collection,
   addDoc,
-  getDoc,
-  getDocs,
-  updateDoc,
-  deleteDoc,
   onSnapshot
 } from 'firebase/firestore';
-
-import { Carousel } from "react-responsive-carousel";
 
 function Avaliacao() {
     const data1 = new Date();
@@ -32,7 +24,7 @@ function Avaliacao() {
     const [comentario, setComentario] = useState('');
 
 
-
+   
 
   useEffect(() => {
     async function loadAvaliacao(){
@@ -72,7 +64,6 @@ function Avaliacao() {
     })
   }  
 
-  
 
    return (
     
@@ -109,7 +100,7 @@ function Avaliacao() {
 
           </div>
 
-        {/* <ul className="prod">
+         <ul className="prod">
             {avaliacao.map( (post) => {
             return(
             <li key={post.id} className="produtos">                
@@ -119,27 +110,14 @@ function Avaliacao() {
                 
             </li>
 
-            )
+            ) 
             })}
-        </ul> */}
-        
-        </div>
-        
-        <Carousel>
+        </ul> 
+    
        
-            {avaliacao.map( (post) => {
-            return(
-            <li key={post.id} className="produtos">                
-                <strong>{post.name}</strong> 
-                <strong>{post.data}</strong> 
-                <p>{post.comentario}</p>                         
-                
-            </li>
 
-            )
-            })}
-         
-        </Carousel>
+      </div>
+        
         
       <Footer/>
       </div>
