@@ -47,6 +47,10 @@ function Sobre() {
           </div>
         </div>
         <br/>
+        <br/>
+        <br/>
+        <br/>
+
         <div>
           <h3>Interessado? Verifique meus cursos</h3>
           <div className="meuscursos">

@@ -4,6 +4,7 @@
   background-size: cover;
   margin: 0 auto;
   text-align: center;
+  display: flex;
 }
 
 /* sobre */
@@ -25,14 +26,52 @@
 .livro{
   display: flex;
   background-color: #E6DFD2;
+  padding: 100px;
 }
 .livro img{
   width: 200px;
-  margin: 10px;
+  margin: 10px auto;
+
 }
 .descr-livro{
   margin: 30px;
   text-align: justify;
+}
+@media screen and (max-width: 640px) {
+  .livro{
+    padding: 50px;
+  }
+  .livro img{
+    width: 120px;
+
+  
+  }
+  
+}
+@media screen and (max-width: 530px) {
+  .livro{
+    padding: 0px;
+  }
+  .livro img{
+    width: 100px;
+    margin: 10px;
+  
+  }
+  
+}
+@media screen and (max-width: 400px) {
+  .livro{
+    display: block;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .livro img{
+    width: 100px;
+
+  
+  }
+  
 }
 
 /* meus cursos */
@@ -43,7 +82,7 @@
     align-items: center;
     margin: 0 auto;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     max-width: 600px;
     padding: 30px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
