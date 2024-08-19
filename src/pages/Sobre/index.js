@@ -2,8 +2,7 @@ import React from "react";
 import "./style.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import valeriaPng from '../../assets/FB_IMG_1718062058497-removebg-preview.png';
-import valeria from '../../assets/FB_IMG_1718049833611.jpg';
+import valeria from '../../assets/IMG-20240730-WA0006.jpg';
 import livro from '../../assets/Screenshot_20240610_204450_Instagram.jpg'
 import sobre from '../../assets/sobre.png';
 
