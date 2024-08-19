@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import logo from '../../assets/figura-geometrica-quadrado.png';
+import logo from '../../assets/68L_Valéria Spegel Rickli_Prancheta 1 cópia.png';
 
 
 function Header() {
@@ -10,7 +10,7 @@ function Header() {
     <header>
         <nav>
             <div className="wrapper">
-              <div className="logo"><a href="/"><img src={logo} alt="logo" width="100px" height="70px"/></a></div>
+              <div className="logo"><a href="/"><img src={logo} alt="logo" width="130px" height="60px"/></a></div>
               <input type="radio" name="slider" id="menu-btn"/>
               <input type="radio" name="slider" id="close-btn"/>
               <ul className="nav-links">

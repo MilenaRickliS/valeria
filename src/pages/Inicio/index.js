@@ -105,7 +105,7 @@ function Inicio() {
       
      
       <div>
-      <h1>Meus cursos</h1>
+      <h1>Minhas mentorias</h1>
       <ul className="prod">
         {produtos.map( (post) => {
           return(

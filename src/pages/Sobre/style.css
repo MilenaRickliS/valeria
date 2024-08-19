@@ -1,10 +1,14 @@
 /* inicio */
 .inicio-sobre{
-  background-image: url('../../assets/fundo1.jpg');
-  background-size: cover;
+  /* background-image: url('../../assets/fundo1.jpg');
+  background-size: cover; */
   margin: 0 auto;
-  text-align: center;
-  display: flex;
+  /* text-align: center;
+  display: flex; */
+}
+.inicio-sobre img{
+  width: 100%;
+  
 }
 
 /* sobre */

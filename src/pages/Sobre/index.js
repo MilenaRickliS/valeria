@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import valeriaPng from '../../assets/FB_IMG_1718062058497-removebg-preview.png';
 import valeria from '../../assets/FB_IMG_1718049833611.jpg';
 import livro from '../../assets/Screenshot_20240610_204450_Instagram.jpg'
-
+import sobre from '../../assets/sobre.png';
 
 function Sobre() {
    return (
@@ -16,14 +16,15 @@ function Sobre() {
         <br/>
         <div className="inicio-sobre">
           <br/>
-          <div>
+          {/* <div>
             <h2>Olá, Eu sou Valéria Spegel Rickli</h2>
             <h1>Empreendedora</h1>
             <h2>Auxílio você a eliminar o efeito sanfona</h2>
             <a href="/" className="saiba-mais">Confira aqui!</a>
             <br/>
           </div>
-          <img src={valeriaPng} alt="foto valéria"/>
+          <img src={valeriaPng} alt="foto valéria"/> */}
+          <img src={sobre} alt="Valéria Rickli"/>
         </div>
         <h1>Sobre mim</h1>
         <div className="sobre-mim">
